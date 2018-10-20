@@ -1,3 +1,6 @@
+/***************************
+Reset and Base Imports
+***************************/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -364,6 +367,9 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+/* 768px / 16px = 48em */
+/* Extra Small Only */
+/* Small Devices, Tablets */
 /***************************
 ****************************
 Reset
@@ -373,9 +379,7 @@ Reset
 html {
   box-sizing: border-box; }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit; }
 
 /***************************
@@ -388,18 +392,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal; }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-weight: bold; }
 
 a {
-  color: #8dc63f;
+  color: #8DC63F;
   font-weight: bold; }
 
 a:hover {
   text-decoration: underline; }
 
+/***************************
+Layout Imports
+***************************/
 /***************************
 ****************************
 Layout Styles
@@ -452,6 +457,9 @@ Layout Styles
     padding-left: 0px;
     padding-right: 0px; } }
 
+/***************************
+Module Imports
+***************************/
 /***************************
 Bg-Image Modules
 ***************************/
@@ -507,6 +515,16 @@ Header
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px; }
+  @media only screen and (min-width: 48em) {
+    .header-primary {
+      background: none;
+      position: absolute;
+      z-index: 99;
+      width: 100%; }
+      .header-primary:after {
+        content: "";
+        display: table;
+        clear: both; } }
 
 /***************************
 Hero Modules
@@ -519,6 +537,9 @@ Hero Modules
   color: white;
   padding-top: 25px;
   padding-bottom: 25px; }
+  @media only screen and (min-width: 48em) {
+    .hero-primary {
+      padding-top: 150px; } }
 
 .hero-primary.bg-image > img {
   opacity: 0.55; }
@@ -550,6 +571,11 @@ Logo Modules
 .logo-primary {
   width: 64px;
   height: 64px; }
+  @media only screen and (min-width: 48em) {
+    .logo-primary {
+      width: auto;
+      height: 50px;
+      float: left; } }
 
 .logo-primary img {
   height: 100%; }
@@ -557,8 +583,7 @@ Logo Modules
 /***************************
 Media Modules
 ***************************/
-.media,
-.media-body {
+.media, .media-body {
   overflow: hidden; }
 
 .media-item {
@@ -582,7 +607,51 @@ Nav Modules
 
 .nav-primary {
   margin-top: 28px; }
+  @media only screen and (min-width: 48em) {
+    .nav-primary {
+      float: right;
+      width: 60%;
+      text-align: right;
+      margin-top: 0px; }
+      .nav-primary li {
+        display: inline-block; } }
 
+.frame {
+  overflow: hidden; }
+
+.frame-primary {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 25px auto 40px auto; }
+  .frame-primary img {
+    width: 100%; }
+  @media only screen and (min-width: 48em) {
+    .frame-primary {
+      width: 355px;
+      height: 355px;
+      border-radius: 177.5px;
+      position: relative;
+      top: -30px;
+      margin: 0 auto; } }
+
+.mask {
+  position: relative; }
+  .mask:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: ""; }
+
+.mask-primary:before {
+  background: #F7941E;
+  opacity: 0.6; }
+
+/***************************
+Theme Imports
+***************************/
 /***************************
 ****************************
 Theme Styles

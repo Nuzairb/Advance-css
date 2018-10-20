@@ -1,11 +1,14 @@
 /***************************
 Bg-Image Modules
 ***************************/
-.bg-image  {
+/* line 4, ../../scss/modules/bg-image.scss */
+.bg-image {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
+
+/* line 9, ../../scss/modules/bg-image.scss */
 .bg-image > img {
   position: absolute;
   top: -9999px;

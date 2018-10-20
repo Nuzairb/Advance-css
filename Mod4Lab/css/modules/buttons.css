@@ -1,6 +1,7 @@
 /***************************
 Button Modules
 ***************************/
+/* line 4, ../../scss/modules/buttons.scss */
 .btn {
   display: inline-block;
   text-align: center;
@@ -16,16 +17,22 @@ Button Modules
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
+
+/* line 19, ../../scss/modules/buttons.scss */
 .btn-primary {
   background: #8DC63F;
   color: white;
   border-color: #8DC63F;
 }
+
+/* line 24, ../../scss/modules/buttons.scss */
 .btn-primary:hover {
   background: none;
   border-color: white;
   text-decoration: none;
 }
+
+/* line 29, ../../scss/modules/buttons.scss */
 .btn-nav {
   color: white;
 }
